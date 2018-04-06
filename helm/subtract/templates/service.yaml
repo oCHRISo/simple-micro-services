@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "subtract.fullname" . }}
+  labels:
+    app: {{ template "subtract.name" . }}
+    chart: {{ template "subtract.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "subtract.name" . }}
+    release: {{ .Release.Name }}

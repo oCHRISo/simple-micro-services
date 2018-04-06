@@ -1,0 +1,15 @@
+html
+  head
+    title= title
+  body
+    form(action='/', method='POST')
+      p
+        | First Number:
+        input(type='text', name='firstnumber', value='')
+        | Second Number:
+        input(type='text', name='secondnumber', value='')
+        select(name='function')
+          option(value='add') Add
+          option(value='subtract') Subtract
+      input(type='submit', value='Submit')
+      p #{answer}

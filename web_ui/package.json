@@ -1,0 +1,16 @@
+{
+  "name": "webui",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "pug": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "request": "^2.85.0"
+  }
+}
